@@ -1,0 +1,21 @@
+{
+  "data": {
+    "id": "00000000-0000-4000-8000-000000000001",
+    "slug": "small-details-better-interfaces",
+    "title": "Small details, better interfaces",
+    "excerpt": "A few practical habits for making everyday interfaces feel considered.",
+    "publishedAt": "2026-09-24T09:00:00Z",
+    "updatedAt": "2026-09-24T09:00:00Z",
+    "readingTimeMinutes": 1,
+    "tags": [
+      {
+        "slug": "engineering",
+        "name": "Engineering"
+      }
+    ],
+    "coverImage": null,
+    "isDemo": false,
+    "bodyMarkdown": "An interface is made of small decisions. A label, a loading state, and a little extra breathing room can change how a product feels.\n\nThis is sample writing for the portfolio. It demonstrates the reading experience; it is not a record of a published article.\n\n## Start with the next action\n\nBefore adding another component, ask what someone is trying to do on this screen. Put that action where they can find it, and describe it with a familiar verb.\n\nA good button label can often replace a paragraph of instructions.\n\n## Make states part of the design\n\nA list does not always contain data. It can be loading, empty, unavailable, or complete. Each state needs a useful response.\n\n| State | What the interface should do |\n| --- | --- |\n| Loading | Keep the layout steady and explain what is happening |\n| Empty | Explain what will appear here |\n| Error | Offer a clear way to try again |\n| Success | Show the result without unnecessary ceremony |\n\n## Leave room to read\n\nKeep lines comfortable, use a small set of type sizes, and let spacing communicate relationships. A heading should belong to the paragraph beneath it.\n\n> The details work best when they help someone move forward.\n\nThe goal is a product that feels easy to understand, even when the work behind it is complex.",
+    "media": []
+  }
+}

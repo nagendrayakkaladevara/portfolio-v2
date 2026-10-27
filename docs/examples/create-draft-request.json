@@ -1,0 +1,14 @@
+{
+  "slug": "my-first-article",
+  "title": "My first article",
+  "excerpt": "An example draft payload.",
+  "bodyMarkdown": "## First section\n\nArticle text.",
+  "tags": [
+    {
+      "slug": "engineering",
+      "name": "Engineering"
+    }
+  ],
+  "coverAssetId": null,
+  "media": []
+}

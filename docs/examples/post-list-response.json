@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "slug": "small-details-better-interfaces",
+      "title": "Small details, better interfaces",
+      "excerpt": "A few practical habits for making everyday interfaces feel considered.",
+      "publishedAt": "2026-09-24T09:00:00Z",
+      "updatedAt": "2026-09-24T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": false
+    }
+  ],
+  "pagination": {
+    "nextCursor": null,
+    "hasMore": false,
+    "limit": 20
+  }
+}

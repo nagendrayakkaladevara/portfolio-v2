@@ -1,0 +1,12 @@
+{
+  "data": {
+    "assetId": "00000000-0000-4000-8000-000000000090",
+    "uploadUrl": "https://ACCOUNT_ID.r2.cloudflarestorage.com/portfolio-private/staging/ASSET_ID/NONCE?X-Amz-Signature=REDACTED_EXAMPLE",
+    "method": "PUT",
+    "headers": {
+      "Content-Type": "image/png"
+    },
+    "expiresAt": "2026-10-07T12:05:00Z",
+    "maxBytes": 10485760
+  }
+}

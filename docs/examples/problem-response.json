@@ -1,0 +1,9 @@
+{
+  "type": "https://portfolio.example.com/problems/stale-version",
+  "title": "This draft has changed",
+  "status": 412,
+  "detail": "Reload the latest version and reconcile your edits.",
+  "instance": "/api/v1/admin/posts/00000000-0000-4000-8000-000000000001",
+  "traceId": "example-trace-id",
+  "code": "stale_version"
+}

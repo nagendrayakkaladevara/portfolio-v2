@@ -1,0 +1,14 @@
+{
+  "type": "done",
+  "messageId": "00000000-0000-4000-8000-000000000023",
+  "text": "Nagendra is a Senior Software Developer at GE Vernova, building interfaces and reusable components for Grid Solutions.",
+  "sources": [
+    {
+      "id": "profile-public-v1",
+      "title": "About Nagendra",
+      "url": "/"
+    }
+  ],
+  "finishReason": "stop",
+  "knowledgeVersion": "public-2026-10-08-v1"
+}

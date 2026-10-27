@@ -1,0 +1,15 @@
+{
+  "data": {
+    "id": "00000000-0000-4000-8000-000000000099",
+    "kind": "publish",
+    "resourceId": "00000000-0000-4000-8000-000000000001",
+    "requestedRevisionId": "00000000-0000-4000-8000-000000000088",
+    "status": "queued",
+    "stage": "validating",
+    "progress": 0,
+    "result": null,
+    "error": null,
+    "createdAt": "2026-10-07T12:00:00Z",
+    "updatedAt": "2026-10-07T12:00:00Z"
+  }
+}

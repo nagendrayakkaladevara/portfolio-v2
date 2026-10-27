@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "title": "Ask about Sai",
+  "welcomeMessage": "Explore Sai\u2019s work, projects, and the ideas behind what he builds.",
+  "suggestedQuestions": [
+    "What does Sai work on?",
+    "Show me his projects",
+    "What are his main skills?",
+    "How can I get in touch?"
+  ],
+  "maxMessageLength": 2000,
+  "disclaimer": "Demo mode \u00b7 live AI connection coming later"
+}

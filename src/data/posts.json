@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "posts": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "slug": "small-details-better-interfaces",
+      "title": "Small details, better interfaces",
+      "excerpt": "A few practical habits for making everyday interfaces feel considered.",
+      "publishedAt": "2026-09-24T09:00:00Z",
+      "updatedAt": "2026-09-24T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "An interface is made of small decisions. A label, a loading state, and a little extra breathing room can change how a product feels.\n\nThis is sample writing for the portfolio. It demonstrates the reading experience; it is not a record of a published article.\n\n## Start with the next action\n\nBefore adding another component, ask what someone is trying to do on this screen. Put that action where they can find it, and describe it with a familiar verb.\n\nA good button label can often replace a paragraph of instructions.\n\n## Make states part of the design\n\nA list does not always contain data. It can be loading, empty, unavailable, or complete. Each state needs a useful response.\n\n| State | What the interface should do |\n| --- | --- |\n| Loading | Keep the layout steady and explain what is happening |\n| Empty | Explain what will appear here |\n| Error | Offer a clear way to try again |\n| Success | Show the result without unnecessary ceremony |\n\n## Leave room to read\n\nKeep lines comfortable, use a small set of type sizes, and let spacing communicate relationships. A heading should belong to the paragraph beneath it.\n\n> The details work best when they help someone move forward.\n\nThe goal is a product that feels easy to understand, even when the work behind it is complex.",
+      "media": []
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000002",
+      "slug": "api-contract-before-server",
+      "title": "An API contract before a server",
+      "excerpt": "Keeping the interface independent from where its content comes from.",
+      "publishedAt": "2026-09-08T09:00:00Z",
+      "updatedAt": "2026-09-08T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "A useful prototype should be easy to replace in pieces. The content source is a good place to start.\n\nThis sample article describes the approach used in this preview.\n\n## Define what the screen needs\n\nAn archive needs titles, dates, and stable links. An article also needs its body and image metadata. Separate those responses so the archive does not download every article.\n\n```ts\ninterface ContentRepository {\n  listPosts(options: ListPostsOptions): Promise<PostList>;\n  getPost(slug: string, signal?: AbortSignal): Promise<Post>;\n}\n```\n\n## Validate the boundary\n\nTypes help while writing code. Runtime validation checks the data that actually arrives. If a response is invalid, show a recoverable error instead of rendering partially trusted content.\n\n## Change the source, keep the interface\n\nThe preview reads a JSON fixture. The future implementation will read the same public shape from an HTTP API. Loading, errors, and pagination belong above that choice.\n\nA contract makes the future backend a concrete implementation task instead of a redesign.",
+      "media": []
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000003",
+      "slug": "images-in-a-publishing-workflow",
+      "title": "Images are part of the publishing workflow",
+      "excerpt": "A draft image should stay private until the article is ready.",
+      "publishedAt": "2026-08-20T09:00:00Z",
+      "updatedAt": "2026-08-20T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "Uploading an image and publishing it are different actions. Treating them separately makes a small publishing system easier to reason about.\n\nThis is an illustrative article for the preview.\n\n## Upload privately\n\nThe backend reserves an asset and issues a short-lived upload URL. The browser sends the original to private storage. The upload URL does not become the article image URL.\n\n## Check before publishing\n\nThe server checks the actual file, reads its dimensions, removes metadata, and creates web-sized versions. Article metadata includes width, height, and a useful text alternative.\n\n![Portfolio interface illustration](/images/og-portfolio.png)\n\n## Publish a stable version\n\nAn article points to immutable public renditions after publication. Updating the draft should not change what readers see until the next version is published.\n\nThe illustration above demonstrates the image renderer. Future blog images will use a Cloudflare R2 custom domain.",
+      "media": [
+        {
+          "id": "00000000-0000-4000-8000-00000000005a",
+          "url": "/images/og-portfolio.png",
+          "alt": "Portfolio interface illustration",
+          "width": 1730,
+          "height": 909,
+          "caption": "Illustration used for this portfolio preview."
+        }
+      ]
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000004",
+      "slug": "loading-states-respect-attention",
+      "title": "Loading states that respect attention",
+      "excerpt": "Small choices for asynchronous interfaces.",
+      "publishedAt": "2026-08-02T09:00:00Z",
+      "updatedAt": "2026-08-02T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "A loading state is part of the product. It tells someone that an action was understood and that work is continuing.\n\n## Keep the page steady\n\nReserve the space the content will occupy when that is practical. A simple placeholder is usually enough for a short article list.\n\n## Offer a way forward\n\nAn error message should explain the immediate problem and provide a retry action. Do not replace a failed live request with sample data: that hides the state of the system.\n\n## Cancel work that no longer matters\n\nWhen navigation makes a request irrelevant, pass cancellation down to the network layer. A bounded timeout also prevents a request from leaving the screen waiting indefinitely.\n\nThis is sample content for the portfolio preview.",
+      "media": []
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000005",
+      "slug": "reduced-motion-is-a-design-choice",
+      "title": "Reduced motion is a design choice",
+      "excerpt": "Motion should clarify change and respect reader preferences.",
+      "publishedAt": "2026-07-16T09:00:00Z",
+      "updatedAt": "2026-07-16T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "A transition can explain where something went or show that a control responded. It should not become an obstacle to reading.\n\n## Keep movement small\n\nA subtle opacity transition is enough for much of a portfolio. Reserve larger movement for interactions where it explains a meaningful change.\n\n## Respect preferences\n\nUse the browser’s reduced-motion setting. Keep content available when animations are removed. Sound should also be optional and off until someone chooses it.\n\n## Test the quiet version\n\nThe interface should still make sense without animation or sound. Text, position, and state carry the core meaning.\n\nThis is sample writing, included to demonstrate the article layout.",
+      "media": []
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000006",
+      "slug": "drafts-and-published-revisions",
+      "title": "Drafts and published revisions",
+      "excerpt": "Why editing a post should not change the live article.",
+      "publishedAt": "2026-06-29T09:00:00Z",
+      "updatedAt": "2026-06-29T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "An editor should be able to work without changing the page that readers are currently viewing.\n\n## Keep two pointers\n\nStore a pointer to the latest draft revision and another to the published revision. Saving creates a new revision and moves only the draft pointer.\n\n## Publish deliberately\n\nPublishing selects one exact revision. The system checks its assets, prepares public files, and changes the published pointer only when that work succeeds.\n\n## Handle concurrent edits\n\nA version number lets the server reject a stale edit. The editor can then reload and reconcile the changes instead of silently overwriting them.\n\nThis article is illustrative sample content, not a personal project claim.",
+      "media": []
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000007",
+      "slug": "one-useful-side-project",
+      "title": "One useful side project",
+      "excerpt": "Start with a small problem that is easy to explain.",
+      "publishedAt": "2026-06-11T09:00:00Z",
+      "updatedAt": "2026-06-11T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "A side project does not need a large feature list to be useful. A clear problem and a finished flow can be enough.\n\n## Find the repeated task\n\nLook for a task that is just inconvenient enough to repeat. Write down the input, the desired outcome, and how someone knows the work is complete.\n\n## Finish the whole path\n\nThe empty state, the first successful use, and recovery from an error are all part of the same feature. Finishing those details teaches more than adding another unfinished screen.\n\nThis sample article helps demonstrate a longer archive.",
+      "media": []
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000008",
+      "slug": "building-in-small-steps",
+      "title": "Building in small steps",
+      "excerpt": "A working slice creates a better foundation for the next decision.",
+      "publishedAt": "2026-05-23T09:00:00Z",
+      "updatedAt": "2026-05-23T09:00:00Z",
+      "readingTimeMinutes": 1,
+      "tags": [
+        {
+          "slug": "engineering",
+          "name": "Engineering"
+        }
+      ],
+      "coverImage": null,
+      "isDemo": true,
+      "bodyMarkdown": "A small, working slice is useful because it turns assumptions into something that can be inspected.\n\n## Make one path work\n\nConnect the page, data, and interaction for one feature. Keep the implementation simple enough that changing a decision remains inexpensive.\n\n## Write down the boundary\n\nDocument what is implemented, what is mocked, and what needs to happen before production. That boundary keeps a preview useful without presenting it as a complete system.\n\nThis is sample writing for the portfolio.",
+      "media": []
+    }
+  ]
+}
